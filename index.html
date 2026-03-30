@@ -4,119 +4,252 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>pono ホームヘルプサービス</title>
-
 <style>
-body {
-  margin: 0;
-  font-family: "Hiragino Kaku Gothic ProN", sans-serif;
-  background: #f5e6ea;
-  color: #333;
-  text-align: center;
-}
+  * {
+    box-sizing: border-box;
+  }
 
-.section {
-  padding: 40px 20px;
-}
+  body {
+    margin: 0;
+    font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    background: #f4e7eb;
+    color: #5a4a46;
+    line-height: 1.8;
+  }
 
-h1 {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
+  .wrap {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 48px 20px 72px;
+  }
 
-.lead {
-  font-size: 16px;
-  margin-bottom: 30px;
-}
+  .hero {
+    text-align: center;
+    padding: 36px 20px 28px;
+  }
 
-.box {
-  background: #ead3c3;
-  margin: 15px auto;
-  padding: 20px;
-  max-width: 500px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
+  .hero h1 {
+    margin: 0;
+    font-size: 40px;
+    line-height: 1.3;
+    color: #6d5752;
+    font-weight: 700;
+  }
 
-.title {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
+  .hero .sub {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #9a7e77;
+  }
 
-.contact {
-  background: #e6d0c3;
-  color: #5c4a42;
-  padding: 30px 20px;
-}
+  .hero .lead {
+    margin-top: 22px;
+    font-size: 20px;
+    color: #7a6560;
+  }
 
-.contact p {
-  margin: 8px 0;
-}
+  .section-title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: #6b5751;
+    margin: 32px 0 28px;
+  }
 
-.small {
-  font-size: 13px;
-  color: #7a675f;
-}
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .card {
+    background: #ead8ca;
+    border-radius: 18px;
+    padding: 28px 24px;
+    box-shadow: 0 4px 14px rgba(100, 70, 60, 0.08);
+  }
+
+  .card h3 {
+    margin: 0 0 12px;
+    font-size: 28px;
+    color: #6a544d;
+  }
+
+  .card .copy {
+    margin: 0 0 10px;
+    font-size: 21px;
+    font-weight: 600;
+    color: #7b625a;
+  }
+
+  .card .desc {
+    margin: 0;
+    font-size: 17px;
+    color: #5e4e49;
+  }
+
+  .area {
+    margin-top: 40px;
+    text-align: center;
+    background: rgba(255,255,255,0.35);
+    border-radius: 16px;
+    padding: 22px 18px;
+  }
+
+  .area p {
+    margin: 8px 0;
+    font-size: 18px;
+    color: #6a5650;
+  }
+
+  .contact {
+    margin-top: 44px;
+    background: #deccbf;
+    border-radius: 24px;
+    padding: 36px 24px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(90, 60, 50, 0.08);
+  }
+
+  .contact h2 {
+    margin: 0 0 10px;
+    font-size: 34px;
+    color: #6b554f;
+  }
+
+  .contact .company-sub {
+    font-size: 20px;
+    color: #8c736c;
+    margin-bottom: 20px;
+  }
+
+  .contact p {
+    margin: 8px 0;
+    font-size: 19px;
+    color: #5c4b46;
+  }
+
+  .contact a {
+    color: #5c4b46;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .contact a:hover {
+    text-decoration: underline;
+  }
+
+  .small {
+    margin-top: 14px;
+    font-size: 16px;
+    color: #7a655f;
+  }
+
+  @media (max-width: 700px) {
+    .wrap {
+      padding: 30px 14px 48px;
+    }
+
+    .hero h1 {
+      font-size: 30px;
+    }
+
+    .hero .sub {
+      font-size: 20px;
+    }
+
+    .hero .lead {
+      font-size: 17px;
+    }
+
+    .section-title {
+      font-size: 24px;
+      margin: 24px 0 18px;
+    }
+
+    .cards {
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .card {
+      padding: 22px 18px;
+    }
+
+    .card h3 {
+      font-size: 24px;
+    }
+
+    .card .copy {
+      font-size: 18px;
+    }
+
+    .card .desc,
+    .area p,
+    .contact p {
+      font-size: 16px;
+    }
+
+    .contact h2 {
+      font-size: 28px;
+    }
+  }
 </style>
 </head>
-
 <body>
+  <div class="wrap">
+    <section class="hero">
+      <h1>ホームヘルプサービス pono</h1>
+      <div class="sub">〜 Reach My Kokoro 〜</div>
+      <div class="lead">いつでも あなたに よりそい 支えたい</div>
+    </section>
 
-<div class="section">
-  <h1>ホームヘルプサービス pono</h1>
-  <div class="lead">〜 Reach My Kokoro 〜</div>
-  <p>いつでも あなたに よりそい 支えたい</p>
-</div>
+    <h2 class="section-title">事業内容</h2>
 
-<div class="section">
-  <h2>事業内容</h2>
+    <section class="cards">
+      <div class="card">
+        <h3>訪問介護</h3>
+        <p class="copy">おうちでの毎日を、そっと。</p>
+        <p class="desc">身体介護・生活援助・通院等乗降介助事業</p>
+      </div>
 
-  <div class="box">
-    <div class="title">訪問介護</div>
-    <p>おうちでの毎日を、そっと。</p>
-    <p>身体介護・生活援助・通院等乗降介助事業</p>
+      <div class="card">
+        <h3>同行援護</h3>
+        <p class="copy">おでかけの道のりを、ともなりで。</p>
+        <p class="desc">知的障がいがある方の外出支援事業</p>
+      </div>
+
+      <div class="card">
+        <h3>行動援護</h3>
+        <p class="copy">外出の不安に、寄り添って。</p>
+        <p class="desc">知的・精神障がいがある方の外出支援事業</p>
+      </div>
+
+      <div class="card">
+        <h3>介護タクシー</h3>
+        <p class="copy">病院やおでかけを一緒に。</p>
+        <p class="desc">移動をサポートする外出支援事業</p>
+      </div>
+    </section>
+
+    <section class="area">
+      <p>香芝市・大和高田市・葛城市・上牧町・広陵町・河合町・川西町</p>
+      <p>介護保険対応 / 障がい福祉サービス対応 / 自費サービス相談可</p>
+    </section>
+
+    <section class="contact">
+      <h2>株式会社 RMk</h2>
+      <div class="company-sub">代表取締役　武安 麗</div>
+
+      <p>〒639-0251<br>奈良県香芝市逢坂2丁目683番地3<br>シティライフ香芝111</p>
+
+      <p>TEL：<a href="tel:0745512868">0745-51-2868</a></p>
+      <p>携帯：<a href="tel:09084067164">090-8406-7164</a></p>
+      <p>FAX：0745-51-2869</p>
+      <p>Email：<a href="mailto:rei@rmk.life">rei@rmk.life</a></p>
+
+      <div class="small">受付時間 8:30〜17:30（月〜金）</div>
+    </section>
   </div>
-
-  <div class="box">
-    <div class="title">同行援護</div>
-    <p>おでかけの道のりを、ともなりで。</p>
-    <p>知的障がいがある方の外出支援事業</p>
-  </div>
-
-  <div class="box">
-    <div class="title">行動援護</div>
-    <p>外出の不安に、寄り添って。</p>
-    <p>知的・精神障がいがある方の外出支援事業</p>
-  </div>
-
-  <div class="box">
-    <div class="title">介護タクシー</div>
-    <p>病院やおでかけを一緒に。</p>
-    <p>移動をサポートする外出支援事業</p>
-  </div>
-
-</div>
-
-<div class="section">
-  <p>香芝市・大和高田市・葛城市・上牧町・広陵町・河合町・川西町</p>
-  <p>介護保険対応 / 障がい福祉サービス対応 / 自費サービス相談可</p>
-</div>
-
-<div class="contact">
-  <h2>株式会社 RMk</h2>
-  <p>代表取締役　武安 麗</p>
-
-  <p>〒639-0251<br>
-  奈良県香芝市逢坂2丁目683番地3<br>
-  シティライフ香芝111</p>
-
-  <p>TEL：0745-51-2868</p>
-  <p>携帯：090-8406-7164</p>
-  <p>FAX：0745-51-2869</p>
-  <p>Email：rei@rmk.life</p>
-
-  <p class="small">受付時間 8:30〜17:30（月〜金）</p>
-</div>
-
 </body>
 </html>
